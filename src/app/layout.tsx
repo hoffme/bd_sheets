@@ -14,7 +14,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-export default ({ children }: Props) => {
+export default function Layout({ children }: Props) {
   return (
     <html lang="en" className="antialiased">
       <body className={inter.className}>{children}</body>

@@ -64,7 +64,7 @@ export const Results = () => {
         else if (params.has('sortDir')) params.delete('sortDir');
 
         router.push(`${pathname}?${params.toString()}`)
-    }, [pathname, router, sort])
+    }, [pathname, router, searchParams, sort])
 
     const columns = useMemo(() => {
         return [

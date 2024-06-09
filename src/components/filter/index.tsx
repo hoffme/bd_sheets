@@ -62,7 +62,7 @@ export const Filter = (props: Props) => {
         else if (params.has('totalScore')) params.delete('totalScore') 
 
         router.push(`${pathname}?${params.toString()}`)
-    }, [router.push, pathname, query, status, country, totalScore])
+    }, [query, status, country, totalScore, router, pathname])
 
     return <form className={"flex flex-col gap-1 p-1 max-w-3xl m-auto w-full"} onSubmit={submit}>
         <TextInput value={query} onValueChange={setQuery} placeholder={"Query"} />
